@@ -14,42 +14,11 @@ const NAV_LINKS = [
 function VoxintaLogo() {
   return (
     <a href="#" className="flex items-center gap-2.5">
-      <svg
-        width="28"
-        height="40"
-        viewBox="0 0 28 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <path
-          d="M4,4 L14,28 L24,4"
-          stroke="white"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M9,32 Q14,37 19,32"
-          stroke="white"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          opacity="1"
-        />
-        <path
-          d="M6,37 Q14,43 22,37"
-          stroke="white"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-          opacity="0.55"
-        />
-        <path
-          d="M3,42 Q14,49 25,42"
-          stroke="white"
-          strokeWidth="1"
-          strokeLinecap="round"
-          opacity="0.25"
-        />
+      <svg width="28" height="40" viewBox="0 0 28 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4,4 L14,28 L24,4" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9,32 Q14,37 19,32" stroke="white" strokeWidth="1.8" strokeLinecap="round" opacity="1" />
+        <path d="M6,37 Q14,43 22,37" stroke="white" strokeWidth="1.4" strokeLinecap="round" opacity="0.55" />
+        <path d="M3,42 Q14,49 25,42" stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.25" />
       </svg>
       <span
         className="text-xl font-bold tracking-widest text-white select-none"
@@ -57,6 +26,19 @@ function VoxintaLogo() {
       >
         VOXINTA
       </span>
+    </a>
+  );
+}
+
+function NavLink({ label, href, onClick }: { label: string; href: string; onClick?: () => void }) {
+  return (
+    <a
+      href={href}
+      onClick={onClick}
+      className="group relative text-sm text-white/55 hover:text-white transition-colors duration-200 py-1"
+    >
+      {label}
+      <span className="absolute bottom-0 left-0 h-px w-0 bg-[#7C6FFF] transition-all duration-300 group-hover:w-full" />
     </a>
   );
 }
@@ -71,11 +53,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu on resize to desktop
   useEffect(() => {
-    const onResize = () => {
-      if (window.innerWidth >= 768) setMobileOpen(false);
-    };
+    const onResize = () => { if (window.innerWidth >= 768) setMobileOpen(false); };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
@@ -83,38 +62,33 @@ export default function Navbar() {
   return (
     <header
       className={[
-        "fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/60 transition-colors duration-300",
-        scrolled ? "border-b border-white/[0.08]" : "border-b border-transparent",
+        "fixed top-0 left-0 right-0 z-50 backdrop-blur-2xl transition-colors duration-300",
+        scrolled
+          ? "bg-[#050507]/85 border-b border-white/[0.06]"
+          : "bg-[#050507]/60 border-b border-transparent",
       ].join(" ")}
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        {/* Logo */}
         <VoxintaLogo />
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
-              <a
-                href={href}
-                className="text-sm text-white/60 hover:text-white transition-colors duration-200"
-              >
-                {label}
-              </a>
+              <NavLink label={label} href={href} />
             </li>
           ))}
         </ul>
 
-        {/* Desktop CTA + Mobile hamburger */}
+        {/* CTA + hamburger */}
         <div className="flex items-center gap-4">
           <a
-            href="#demo"
-            className="hidden md:inline-flex items-center text-sm font-medium text-white rounded-full px-5 py-2 transition-opacity hover:opacity-90"
-            style={{
-              background: "linear-gradient(135deg, #6C63FF 0%, #8B5CF6 100%)",
-            }}
+            href="#contact"
+            className="group hidden md:inline-flex relative overflow-hidden items-center text-sm font-medium text-white rounded-full px-5 py-2"
+            style={{ background: "linear-gradient(135deg, #7C6FFF 0%, #06B6D4 100%)" }}
           >
-            Get a Demo
+            <span className="relative z-10">Get a Demo</span>
+            <span className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 bg-gradient-to-r from-transparent via-white/15 to-transparent skew-x-12" />
           </a>
 
           <button
@@ -136,28 +110,20 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden md:hidden border-t border-white/[0.08]"
+            className="overflow-hidden md:hidden border-t border-white/[0.06]"
           >
             <ul className="flex flex-col px-6 py-4 gap-1">
               {NAV_LINKS.map(({ label, href }) => (
                 <li key={href}>
-                  <a
-                    href={href}
-                    onClick={() => setMobileOpen(false)}
-                    className="block py-3 text-sm text-white/60 hover:text-white transition-colors duration-200"
-                  >
-                    {label}
-                  </a>
+                  <NavLink label={label} href={href} onClick={() => setMobileOpen(false)} />
                 </li>
               ))}
               <li className="pt-3">
                 <a
-                  href="#demo"
+                  href="#contact"
                   onClick={() => setMobileOpen(false)}
-                  className="inline-flex items-center text-sm font-medium text-white rounded-full px-5 py-2 transition-opacity hover:opacity-90"
-                  style={{
-                    background: "linear-gradient(135deg, #6C63FF 0%, #8B5CF6 100%)",
-                  }}
+                  className="inline-flex items-center text-sm font-medium text-white rounded-full px-5 py-2"
+                  style={{ background: "linear-gradient(135deg, #7C6FFF 0%, #06B6D4 100%)" }}
                 >
                   Get a Demo
                 </a>

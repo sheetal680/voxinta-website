@@ -53,7 +53,7 @@ function FAQItem({
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
+          transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
           className="shrink-0 text-white/40"
         >
           <ChevronDown size={18} />
@@ -67,7 +67,7 @@ function FAQItem({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
+            transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
             className="overflow-hidden"
           >
             <p className="pt-3 text-sm leading-relaxed text-white/55">
@@ -86,16 +86,16 @@ export default function FAQ() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section id="faq" className="py-24 bg-[#0A0A0F]">
+    <section id="faq" className="py-24 bg-[#050507]">
       {/* Header */}
       <motion.div
         className="text-center mb-16 px-6"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.55, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
+        transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
       >
-        <p className="text-xs tracking-[0.3em] text-purple-400 uppercase mb-3">
+        <p className="text-xs tracking-[0.4em] text-purple-400 uppercase mb-3">
           FAQ
         </p>
         <h2
@@ -104,7 +104,7 @@ export default function FAQ() {
         >
           Common Questions
         </h2>
-        <p className="text-white/50 text-lg mt-4">
+        <p className="text-white/55 text-lg mt-4">
           Everything you need to know before getting started.
         </p>
       </motion.div>
@@ -115,7 +115,7 @@ export default function FAQ() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
+        transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
       >
         {FAQS.map((item, i) => (
           <FAQItem

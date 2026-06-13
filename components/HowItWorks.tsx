@@ -40,15 +40,15 @@ const STEPS: Step[] = [
 
 const container = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.15 } },
+  show: { transition: { staggerChildren: 0.12 } },
 };
 
 const stepVariant = {
-  hidden: { opacity: 0, y: 32 },
+  hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] },
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
   },
 };
 
@@ -56,11 +56,11 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative overflow-hidden py-24 bg-[#07070A]"
+      className="relative overflow-hidden py-24 bg-[#050507]"
     >
       {/* Header */}
       <div className="text-center mb-20 px-6">
-        <p className="text-xs tracking-[0.3em] text-purple-400 uppercase mb-3">
+        <p className="text-xs tracking-[0.4em] text-purple-400 uppercase mb-3">
           The Process
         </p>
         <h2
@@ -69,7 +69,7 @@ export default function HowItWorks() {
         >
           Simple Process. Real Results.
         </h2>
-        <p className="text-white/50 text-lg mt-4">
+        <p className="text-white/55 text-lg mt-4">
           From first message to live AI — we make it seamless.
         </p>
       </div>
@@ -80,12 +80,12 @@ export default function HowItWorks() {
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.55, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
+        transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
       >
         {STATS.map((stat) => (
           <div
             key={stat.label}
-            className="bg-[#0F0F14] rounded-xl p-6 border border-white/[0.06] border-t-2 border-t-purple-500/50 flex flex-col items-center text-center"
+            className="bg-[#0C0C12] rounded-xl p-6 border border-white/[0.06] border-t-2 border-t-purple-500/50 flex flex-col items-center text-center"
           >
             <span
               className="text-3xl font-black text-white"

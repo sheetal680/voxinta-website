@@ -71,13 +71,13 @@ const container = {
 };
 
 const cardVariant = {
-  hidden: { opacity: 0, y: 32 },
+  hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.55,
-      ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number],
+      duration: 0.7,
+      ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
     },
   },
 };
@@ -92,12 +92,12 @@ function PricingCard({ plan }: { plan: Plan }) {
       className={[
         "relative flex flex-col rounded-2xl p-8",
         plan.featured
-          ? "border border-purple-500/40 bg-[#0F0F14] md:-mt-4 md:mb-4"
-          : "border border-white/[0.08] bg-[#0F0F14]",
+          ? "border border-purple-500/40 bg-[#0C0C12] md:-mt-4 md:mb-4"
+          : "border border-white/[0.08] bg-[#0C0C12]",
       ].join(" ")}
       style={
         plan.featured
-          ? { boxShadow: "0 0 40px rgba(108,99,255,0.12)" }
+          ? { boxShadow: "0 0 0 1px rgba(124,111,255,0.3), 0 20px 60px rgba(124,111,255,0.08)" }
           : undefined
       }
     >
@@ -106,7 +106,7 @@ function PricingCard({ plan }: { plan: Plan }) {
         <span
           className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-4 py-1 text-xs font-semibold text-white"
           style={{
-            background: "linear-gradient(135deg, #6C63FF 0%, #8B5CF6 100%)",
+            background: "linear-gradient(135deg, #7C6FFF 0%, #06B6D4 100%)",
           }}
         >
           {plan.badge}
@@ -160,7 +160,7 @@ function PricingCard({ plan }: { plan: Plan }) {
           ].join(" ")}
           style={
             plan.featured
-              ? { background: "linear-gradient(135deg, #6C63FF 0%, #8B5CF6 100%)" }
+              ? { background: "linear-gradient(135deg, #7C6FFF 0%, #06B6D4 100%)" }
               : undefined
           }
         >
@@ -173,10 +173,10 @@ function PricingCard({ plan }: { plan: Plan }) {
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-[#07070A]">
+    <section id="pricing" className="py-24 bg-[#050507]">
       {/* Header */}
       <div className="text-center mb-16 px-6">
-        <p className="text-xs tracking-[0.3em] text-purple-400 uppercase mb-3">
+        <p className="text-xs tracking-[0.4em] text-purple-400 uppercase mb-3">
           Pricing
         </p>
         <h2
@@ -185,7 +185,7 @@ export default function Pricing() {
         >
           Clear Pricing. No Surprises.
         </h2>
-        <p className="text-white/50 text-lg mt-4">
+        <p className="text-white/55 text-lg mt-4">
           Pay 50% upfront, 50% after delivery. Always.
         </p>
       </div>

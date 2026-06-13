@@ -8,16 +8,29 @@ import Contact from "@/components/Contact";
 import Team from "@/components/Team";
 import Footer from "@/components/Footer";
 
+function Divider() {
+  return (
+    <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+  );
+}
+
 export default function Home() {
   return (
     <main>
       <Hero />
+      <Divider />
       <Services />
+      <Divider />
       <HowItWorks />
+      <Divider />
       <ComingSoon />
+      <Divider />
       <Pricing />
+      <Divider />
       <FAQ />
+      <Divider />
       <Contact />
+      <Divider />
       <Team />
       <Footer />
     </main>

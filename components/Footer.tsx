@@ -43,7 +43,7 @@ function InstagramIcon() {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#07070A] border-t border-white/[0.06] py-12">
+    <footer className="bg-gradient-to-b from-[#050507] to-[#070709] border-t border-white/[0.06] py-12">
       {/* Top row */}
       <div className="flex flex-wrap justify-between items-start gap-8 max-w-6xl mx-auto px-6">
         {/* Left — logo */}
@@ -53,7 +53,7 @@ export default function Footer() {
 
         {/* Center — quick links */}
         <div>
-          <p className="text-xs text-white/30 uppercase tracking-widest mb-4">
+          <p className="text-xs text-white/25 uppercase tracking-widest mb-4">
             Quick Links
           </p>
           <ul className="flex flex-col gap-2">
@@ -72,7 +72,7 @@ export default function Footer() {
 
         {/* Right — social */}
         <div>
-          <p className="text-xs text-white/30 uppercase tracking-widest mb-4">
+          <p className="text-xs text-white/25 uppercase tracking-widest mb-4">
             Connect
           </p>
           <a
@@ -89,8 +89,8 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/[0.06] mt-10 pt-6 max-w-6xl mx-auto px-6 flex flex-wrap justify-between items-center gap-4">
-        <p className="text-xs text-white/30">© 2025 Voxinta. All rights reserved.</p>
-        <p className="text-xs text-white/30">Built with AI in India 🇮🇳</p>
+        <p className="text-xs text-white/25">© 2025 Voxinta. All rights reserved.</p>
+        <p className="text-xs text-white/25">Built with AI in India 🇮🇳</p>
       </div>
     </footer>
   );

@@ -8,13 +8,13 @@ const WA_LINK =
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-[#07070A]">
+    <section id="contact" className="py-24 bg-[#050507]">
       <motion.div
         className="text-center px-6"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.55, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
+        transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
       >
         <h2
           className="text-4xl md:text-5xl font-black text-white"

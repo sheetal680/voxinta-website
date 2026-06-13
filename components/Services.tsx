@@ -134,11 +134,11 @@ const container = {
 };
 
 const cardVariant = {
-  hidden: { opacity: 0, y: 32 },
+  hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] },
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
   },
 };
 
@@ -153,11 +153,11 @@ function ServiceModal({ data, onClose }: { data: ModalData; onClose: () => void 
         onClick={onClose}
       >
         <motion.div
-          className="relative w-full max-w-lg bg-[#0F0F14] border border-white/10 rounded-2xl p-8"
+          className="relative w-full max-w-lg bg-[#0C0C12] border border-white/10 rounded-2xl p-8"
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.92 }}
-          transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
+          transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close */}
@@ -225,18 +225,18 @@ function ServiceCard({
         service.comingSoon
           ? {}
           : {
-              scale: 1.01,
-              boxShadow: "0 0 30px rgba(108,99,255,0.08)",
-              borderColor: "rgba(108,99,255,0.35)",
-              transition: { duration: 0.3 },
+              scale: 1.02,
+              boxShadow: "0 0 0 1px rgba(124,111,255,0.3), 0 20px 60px rgba(124,111,255,0.08)",
+              borderColor: "rgba(124,111,255,0.3)",
+              transition: { duration: 0.2 },
             }
       }
       onClick={onClick}
       className={[
-        "relative bg-[#0F0F14] rounded-2xl p-7 flex flex-col gap-5",
+        "relative bg-[#0C0C12] rounded-2xl p-7 flex flex-col gap-5",
         service.comingSoon
-          ? "border border-dashed border-white/[0.08] opacity-70 cursor-default"
-          : "border border-white/[0.08] cursor-pointer",
+          ? "border border-dashed border-white/[0.06] opacity-70 cursor-default"
+          : "border border-white/[0.06] cursor-pointer",
       ].join(" ")}
       style={{ transition: "border-color 300ms, box-shadow 300ms" }}
     >
@@ -284,17 +284,17 @@ export default function Services() {
   const [activeModal, setActiveModal] = useState<ModalData | null>(null);
 
   return (
-    <section id="services" className="relative py-24 bg-[#07070A]">
+    <section id="services" className="relative py-24 bg-[#050507]">
       {/* Header */}
       <div className="text-center mb-16 px-6">
-        <p className="text-xs tracking-[0.3em] text-purple-400 uppercase mb-3">What We Build</p>
+        <p className="text-xs tracking-[0.4em] text-purple-400 uppercase mb-3">What We Build</p>
         <h2
-          className="text-4xl md:text-5xl font-black text-white"
-          style={{ fontFamily: "var(--font-space-grotesk)" }}
+          className="text-4xl md:text-5xl font-black text-[#F8F8FF]"
+          style={{ fontFeatureSettings: "'ss01'", fontFamily: "var(--font-space-grotesk)" }}
         >
           What We Can Build For You
         </h2>
-        <p className="text-white/50 text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-white/55 text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
           Pick one, combine them, or let us recommend the right stack for your business.
         </p>
       </div>

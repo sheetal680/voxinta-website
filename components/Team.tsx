@@ -9,11 +9,11 @@ const container = {
 };
 
 const cardVariant = {
-  hidden: { opacity: 0, y: 28 },
+  hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] },
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
   },
 };
 
@@ -27,16 +27,16 @@ function Avatar({ initial }: { initial: string }) {
 
 export default function Team() {
   return (
-    <section id="team" className="py-24 bg-[#07070A]">
+    <section id="team" className="py-24 bg-[#050507]">
       {/* Header */}
       <motion.div
         className="text-center mb-16 px-6"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.55, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
+        transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
       >
-        <p className="text-xs tracking-[0.3em] text-purple-400 uppercase mb-3">
+        <p className="text-xs tracking-[0.4em] text-purple-400 uppercase mb-3">
           The Team
         </p>
         <h2
@@ -45,7 +45,7 @@ export default function Team() {
         >
           The People Behind Voxinta
         </h2>
-        <p className="text-white/50 text-lg mt-4">
+        <p className="text-white/55 text-lg mt-4">
           Young builders obsessed with AI and business automation.
         </p>
       </motion.div>
@@ -58,21 +58,30 @@ export default function Team() {
         viewport={{ once: true, margin: "-80px" }}
         className="flex flex-wrap justify-center gap-8 px-6"
       >
-        {/* Sheetal — not clickable */}
-        <motion.div
+        {/* Sheetal — clickable */}
+        <motion.a
           variants={cardVariant}
-          className="flex w-64 flex-col items-center rounded-2xl border border-white/[0.08] bg-[#0F0F14] p-8 text-center"
+          href="https://shivani-portfolio-gamma-tawny.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{
+            scale: 1.02,
+            borderColor: "rgba(168,139,250,0.4)",
+            boxShadow: "0 0 0 1px rgba(124,111,255,0.3), 0 20px 60px rgba(124,111,255,0.08)",
+            transition: { duration: 0.2 },
+          }}
+          className="flex w-64 flex-col items-center rounded-2xl border border-white/[0.06] bg-[#0C0C12] p-8 text-center cursor-pointer"
         >
           <Avatar initial="S" />
           <p
-            className="mt-5 text-xl font-bold text-white"
+            className="mt-5 text-xl font-bold text-white flex items-center gap-1.5 justify-center"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             Sheetal
+            <ExternalLink size={14} className="text-white/40" />
           </p>
           <p className="mt-1 text-sm text-purple-400">CEO & Co-Founder</p>
-          <p className="mt-2 text-xs text-white/25 italic">Portfolio coming soon</p>
-        </motion.div>
+        </motion.a>
 
         {/* Mohan — clickable */}
         <motion.a
@@ -83,9 +92,10 @@ export default function Team() {
           whileHover={{
             scale: 1.02,
             borderColor: "rgba(168,139,250,0.4)",
+            boxShadow: "0 0 0 1px rgba(124,111,255,0.3), 0 20px 60px rgba(124,111,255,0.08)",
             transition: { duration: 0.2 },
           }}
-          className="flex w-64 flex-col items-center rounded-2xl border border-white/[0.08] bg-[#0F0F14] p-8 text-center cursor-pointer"
+          className="flex w-64 flex-col items-center rounded-2xl border border-white/[0.06] bg-[#0C0C12] p-8 text-center cursor-pointer"
         >
           <Avatar initial="M" />
           <p

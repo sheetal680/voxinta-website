@@ -33,7 +33,7 @@ const cardVariant = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] },
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] },
   },
 };
 
@@ -41,16 +41,16 @@ export default function ComingSoon() {
   const Icon = LLM_CARD.icon;
 
   return (
-    <section id="coming-soon" className="py-24 bg-[#07070A]">
+    <section id="coming-soon" className="py-24 bg-[#050507]">
       {/* Header */}
       <motion.div
         className="text-center mb-16 px-6"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.55, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
+        transition={{ duration: 0.75, ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number] }}
       >
-        <p className="text-xs tracking-[0.3em] text-purple-400 uppercase mb-3">
+        <p className="text-xs tracking-[0.4em] text-purple-400 uppercase mb-3">
           What&apos;s Next
         </p>
         <h2
@@ -59,7 +59,7 @@ export default function ComingSoon() {
         >
           We&apos;re Just Getting Started
         </h2>
-        <p className="text-white/50 text-lg mt-4">
+        <p className="text-white/55 text-lg mt-4">
           Voxinta is building the next generation of AI products.
         </p>
       </motion.div>
@@ -80,7 +80,7 @@ export default function ComingSoon() {
             borderStyle: "solid",
             transition: { duration: 0.2 },
           }}
-          className="relative bg-[#0F0F14] border border-dashed border-white/[0.08] rounded-2xl p-7 flex flex-col gap-5 opacity-90"
+          className="relative bg-[#0C0C12] border border-dashed border-white/[0.08] rounded-2xl p-7 flex flex-col gap-5 opacity-90"
         >
           <span className="absolute top-4 right-4 text-xs px-3 py-1 rounded-full bg-white/5 text-white/40 border border-white/10">
             {LLM_CARD.badge}
@@ -112,7 +112,7 @@ export default function ComingSoon() {
             borderStyle: "solid",
             transition: { duration: 0.2 },
           }}
-          className="relative bg-[#0F0F14] border border-dashed border-white/[0.08] rounded-2xl p-7 flex flex-col items-center justify-center text-center gap-4 overflow-hidden min-h-[200px]"
+          className="relative bg-[#0C0C12] border border-dashed border-white/[0.08] rounded-2xl p-7 flex flex-col items-center justify-center text-center gap-4 overflow-hidden min-h-[200px]"
         >
           {/* Pulse glow */}
           <div
