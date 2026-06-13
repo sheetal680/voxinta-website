@@ -6,6 +6,7 @@ import Demo from "@/components/Demo";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
+import Team from "@/components/Team";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Pricing />
       <FAQ />
       <Contact />
+      <Team />
       <Footer />
     </main>
   );

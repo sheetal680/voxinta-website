@@ -70,7 +70,7 @@ export default function Demo() {
           >
             <p className="text-white/80 text-sm leading-relaxed">
               This same bot costs{" "}
-              <span className="text-white font-semibold">₹20,000</span>. Most
+              <span className="text-white font-semibold">₹14,999</span>. Most
               agencies charge{" "}
               <span className="text-white font-semibold">₹60,000+</span>
             </p>

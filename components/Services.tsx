@@ -32,7 +32,7 @@ const SERVICES: Service[] = [
     tag: "",
     title: "AI Voice Agent",
     description: "Answers calls, books appointments, handles queries — automatically. Your business never misses a customer again.",
-    price: "Starting ₹20,000",
+    price: "Starting ₹19,999",
     featured: false,
     modal: {
       title: "AI Voice Agent",
@@ -44,7 +44,7 @@ const SERVICES: Service[] = [
         "Transfers complex queries to humans",
         "Works in English, Hindi, Telugu",
       ],
-      price: "Starting ₹20,000",
+      price: "Starting ₹14,999",
     },
   },
   {
@@ -53,7 +53,7 @@ const SERVICES: Service[] = [
     tag: "Most Popular",
     title: "AI Chatbot",
     description: "24/7 customer support trained on your exact business data. Answers like your best employee, never gets tired.",
-    price: "Starting ₹20,000",
+    price: "Starting ₹14,999",
     featured: true,
     modal: {
       title: "AI Chatbot",
@@ -65,7 +65,7 @@ const SERVICES: Service[] = [
         "Integrates with WhatsApp & website",
         "Dashboard to track conversations",
       ],
-      price: "Starting ₹20,000",
+      price: "Starting ₹14,999",
     },
   },
   {
@@ -74,7 +74,7 @@ const SERVICES: Service[] = [
     tag: "",
     title: "Business Website",
     description: "Fast, modern websites built to generate leads. Mobile-first, SEO-ready, delivered in 7 days.",
-    price: "Starting ₹15,000",
+    price: "Starting ₹14,999",
     featured: false,
     modal: {
       title: "Business Website",
@@ -86,7 +86,7 @@ const SERVICES: Service[] = [
         "Fast loading under 2 seconds",
         "Delivered in 7 days",
       ],
-      price: "Starting ₹15,000",
+      price: "Starting ₹14,999",
     },
   },
   {
@@ -95,7 +95,7 @@ const SERVICES: Service[] = [
     tag: "Advanced",
     title: "RAG Knowledge Bot",
     description: "Upload your PDFs, documents, manuals. Your AI answers questions from them instantly and accurately.",
-    price: "Starting ₹25,000",
+    price: "Starting ₹14,999",
     featured: false,
     modal: {
       title: "RAG Knowledge Bot",
@@ -107,7 +107,7 @@ const SERVICES: Service[] = [
         "Can be embedded anywhere",
         "Learns from your content only",
       ],
-      price: "Starting ₹25,000",
+      price: "Starting ₹14,999",
     },
   },
   {

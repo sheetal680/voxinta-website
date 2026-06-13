@@ -19,7 +19,7 @@ interface Plan {
 const PLANS: Plan[] = [
   {
     label: "Starter",
-    price: "₹15,000",
+    price: "₹14,999",
     bestFor: "New businesses needing a web presence",
     features: [
       "Modern business website",
@@ -34,7 +34,7 @@ const PLANS: Plan[] = [
   },
   {
     label: "Growth",
-    price: "₹35,000",
+    price: "₹34,999",
     bestFor: "Businesses wanting to automate lead capture",
     features: [
       "Everything in Starter",
@@ -50,7 +50,7 @@ const PLANS: Plan[] = [
   },
   {
     label: "Pro",
-    price: "₹80,000",
+    price: "₹79,999",
     bestFor: "Businesses ready for full automation",
     features: [
       "Everything in Growth",
