@@ -17,13 +17,6 @@ const cardVariant = {
   },
 };
 
-function Avatar({ initial }: { initial: string }) {
-  return (
-    <div className="flex h-28 w-28 items-center justify-center rounded-full border-2 border-purple-500/40 bg-purple-500/20">
-      <span className="text-2xl font-bold text-purple-300">{initial}</span>
-    </div>
-  );
-}
 
 export default function Team() {
   return (
@@ -72,7 +65,11 @@ export default function Team() {
           }}
           className="flex w-64 flex-col items-center rounded-2xl border border-white/[0.06] bg-[#0C0C12] p-8 text-center cursor-pointer"
         >
-          <Avatar initial="S" />
+          <img
+            src="/team/sheetal.jpeg"
+            alt="Sheetal"
+            className="w-28 h-28 rounded-full object-cover object-top border-2 border-purple-500/40"
+          />
           <p
             className="mt-5 text-xl font-bold text-white flex items-center gap-1.5 justify-center"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
@@ -80,7 +77,7 @@ export default function Team() {
             Sheetal
             <ExternalLink size={14} className="text-white/40" />
           </p>
-          <p className="mt-1 text-sm text-purple-400">CEO & Co-Founder</p>
+          <p className="mt-1 text-sm text-purple-400">Founder & CEO</p>
         </motion.a>
 
         {/* Mohan — clickable */}
@@ -97,7 +94,11 @@ export default function Team() {
           }}
           className="flex w-64 flex-col items-center rounded-2xl border border-white/[0.06] bg-[#0C0C12] p-8 text-center cursor-pointer"
         >
-          <Avatar initial="M" />
+          <img
+            src="/team/mohan.jpeg"
+            alt="Mohan"
+            className="w-28 h-28 rounded-full object-cover object-top border-2 border-purple-500/40"
+          />
           <p
             className="mt-5 text-xl font-bold text-white flex items-center gap-1.5 justify-center"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
