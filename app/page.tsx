@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import Projects from "@/components/Projects";
 import HowItWorks from "@/components/HowItWorks";
 import ComingSoon from "@/components/ComingSoon";
 import Pricing from "@/components/Pricing";
@@ -20,6 +21,8 @@ export default function Home() {
       <Hero />
       <Divider />
       <Services />
+      <Divider />
+      <Projects />
       <Divider />
       <HowItWorks />
       <Divider />
