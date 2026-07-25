@@ -54,7 +54,7 @@ const PLANS: Plan[] = [
     bestFor: "Businesses ready for full automation",
     features: [
       "Everything in Growth",
-      "AI Voice Agent (answers calls)",
+      "Custom AI solution tailored to your business",
       "Full automation pipeline",
       "Priority support",
       "Monthly retainer available",

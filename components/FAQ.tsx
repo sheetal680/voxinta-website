@@ -11,7 +11,7 @@ const FAQS = [
   },
   {
     q: "How long does the build take?",
-    a: "Websites take 5–7 days. Chatbots 7–10 days. AI Voice Agents 2–3 weeks. You'll always see a working demo before final delivery.",
+    a: "Websites take 5–7 days. Chatbots and RAG bots 7–10 days. Custom AI projects 2–3 weeks. You'll always see a working demo before final delivery.",
   },
   {
     q: "What if I'm not satisfied with the result?",

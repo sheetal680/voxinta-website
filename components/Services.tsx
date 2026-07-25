@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { PhoneCall, MessageSquare, Monitor, Database, Plus, X, CheckCircle2, type LucideIcon } from "lucide-react";
+import { MessageSquare, Monitor, Database, Plus, X, CheckCircle2, type LucideIcon } from "lucide-react";
 
 const WA_LINK = "https://wa.me/918977241245?text=Hi%2C%20I%27m%20interested%20in%20Voxinta%27s%20services";
 
@@ -26,27 +26,6 @@ interface Service {
 }
 
 const SERVICES: Service[] = [
-  {
-    icon: PhoneCall,
-    iconColor: "#6C63FF",
-    tag: "",
-    title: "AI Voice Agent",
-    description: "Answers calls, books appointments, handles queries — automatically. Your business never misses a customer again.",
-    price: "Starting ₹19,999",
-    featured: false,
-    modal: {
-      title: "AI Voice Agent",
-      description: "Our AI Voice Agent answers incoming calls 24/7, books appointments, handles FAQs, and transfers to a human when needed. Never miss a lead again.",
-      features: [
-        "Answers calls automatically",
-        "Books appointments",
-        "Handles FAQs",
-        "Transfers complex queries to humans",
-        "Works in English, Hindi, Telugu",
-      ],
-      price: "Starting ₹14,999",
-    },
-  },
   {
     icon: MessageSquare,
     iconColor: "#00D4FF",

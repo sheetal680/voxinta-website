@@ -15,12 +15,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Voxinta — AI Voice Agents, Chatbots & Websites for Businesses",
+  title: "Voxinta — AI Chatbots, Automation & Websites for Businesses",
   description:
-    "Voxinta builds AI-powered voice agents, chatbots, and business websites for Indian businesses. Working demo before you pay.",
+    "Voxinta builds AI-powered chatbots, automation tools, and business websites for Indian businesses. Working demo before you pay.",
   openGraph: {
     title: "Voxinta — AI for Your Business",
-    description: "AI voice agents, chatbots and websites for Indian businesses.",
+    description: "AI chatbots, automation tools and websites for Indian businesses.",
     url: "https://voxinta.com",
     siteName: "Voxinta",
     type: "website",

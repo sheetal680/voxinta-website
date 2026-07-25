@@ -100,8 +100,8 @@ export default function Hero() {
           className="mt-6 max-w-2xl text-lg md:text-xl leading-relaxed text-white/55"
           {...fadeUp(0.2)}
         >
-          From AI voice agents that answer calls, to chatbots that convert
-          leads — Voxinta delivers intelligent automation for growing businesses
+          From AI chatbots that convert leads, to automation tools that save
+          hours — Voxinta delivers intelligent solutions for growing businesses
           across India.
         </motion.p>
 
