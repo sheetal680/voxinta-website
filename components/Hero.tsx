@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Transition } from "framer-motion";
-import { PlayCircle, CheckCircle2 } from "lucide-react";
+import { MessageCircle, CheckCircle2 } from "lucide-react";
 
 const ease = [0.25, 0.46, 0.45, 0.94] satisfies Transition["ease"];
 
@@ -108,14 +108,16 @@ export default function Hero() {
         {/* CTA button */}
         <motion.div className="mt-10 flex justify-center" {...fadeUp(0.3)}>
           <a
-            href="#services"
+            href="https://wa.me/918977241245?text=Hi%2C%20I%27m%20interested%20in%20Voxinta%27s%20services"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 rounded-lg px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:opacity-90 hover:scale-105"
             style={{
-              background: "linear-gradient(135deg, #7C6FFF 0%, #06B6D4 100%)",
+              background: "linear-gradient(to right, #7C6FFF, #06B6D4)",
             }}
           >
-            <PlayCircle size={18} />
-            See Live Demo
+            <MessageCircle size={18} />
+            Get a Free Consultation
           </a>
         </motion.div>
 
